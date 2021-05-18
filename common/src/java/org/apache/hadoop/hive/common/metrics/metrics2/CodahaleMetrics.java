@@ -140,7 +140,8 @@ public class CodahaleMetrics implements org.apache.hadoop.hive.common.metrics.co
      */
     public void close() throws IOException {
       if (isOpen) {
-        timerContext.close();
+        long stop = timerContext.stop();
+        LOGGER.info(String.format("%s cost time(ms) %s",name,stop/1000/1000));
         metrics.decrementCounter(ACTIVE_CALLS + name);
       } else {
         throw new IOException("Scope named " + name + " is not open, cannot be closed.");
