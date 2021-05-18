@@ -185,6 +185,21 @@
   </properties>
 
   <repositories>
+    <repository>
+      <id>aliyun-public</id>
+      <name>阿里云public(聚合了central和jcenter)</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+      <layout>default</layout>
+    </repository>
+    <!--hortonworks-->
+    <repository>
+      <id>hwx-releases</id>
+      <url>http://repo.hortonworks.com/content/repositories/releases/</url>
+    </repository>
+    <repository>
+      <id>hwx-public</id>
+      <url>http://repo.hortonworks.com/content/groups/public/</url>
+    </repository>
    <!-- This needs to be removed before checking in-->
     <repository>
       <id>datanucleus</id>
