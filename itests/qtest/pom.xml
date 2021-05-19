@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.apache.hive</groupId>
     <artifactId>hive-it</artifactId>
-    <version>1.2.1000.2.6.5.0-SNAPSHOT</version>
+    <version>1.2.1000.2.6.5.0-292</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -331,31 +331,31 @@
           <classifier>tests</classifier>
           <scope>test</scope>
         </dependency>
-        <dependency> 
-          <groupId>org.apache.tez</groupId> 
+        <dependency>
+          <groupId>org.apache.tez</groupId>
           <artifactId>tez-tests</artifactId>
           <version>${tez.version}</version>
           <type>test-jar</type>
         </dependency>
-        <dependency> 
+        <dependency>
           <groupId>org.apache.tez</groupId>
           <artifactId>tez-api</artifactId>
           <version>${tez.version}</version>
           <scope>test</scope>
         </dependency>
-        <dependency> 
+        <dependency>
           <groupId>org.apache.tez</groupId>
           <artifactId>tez-runtime-library</artifactId>
           <version>${tez.version}</version>
           <scope>test</scope>
         </dependency>
-        <dependency> 
+        <dependency>
           <groupId>org.apache.tez</groupId>
           <artifactId>tez-mapreduce</artifactId>
           <version>${tez.version}</version>
           <scope>test</scope>
         </dependency>
-        <dependency> 
+        <dependency>
           <groupId>org.apache.tez</groupId>
           <artifactId>tez-dag</artifactId>
           <version>${tez.version}</version>
@@ -509,7 +509,7 @@
                               clusterMode="tez"
                               runDisabled="${run_disabled}"
                               hiveConfDir="${basedir}/${hive.path.to.root}/data/conf/tez"
-                              resultsDirectory="${basedir}/${hive.path.to.root}/ql/src/test/results/clientpositive/tez" 
+                              resultsDirectory="${basedir}/${hive.path.to.root}/ql/src/test/results/clientpositive/tez"
                               className="TestMiniTezCliDriver"
                               logFile="${project.build.directory}/testminitezclidrivergen.log"
                               logDirectory="${project.build.directory}/qfile-results/clientpositive/"

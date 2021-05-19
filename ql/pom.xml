@@ -19,7 +19,7 @@
   <parent>
     <groupId>org.apache.hive</groupId>
     <artifactId>hive</artifactId>
-    <version>1.2.1000.2.6.5.0-SNAPSHOT</version>
+    <version>1.2.1000.2.6.5.0-292</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -234,7 +234,7 @@
       <version>${calcite.version}</version>
       <exclusions>
         <!-- hsqldb interferes with the use of derby as the default db
-          in hive's use of datanucleus. 
+          in hive's use of datanucleus.
         -->
         <exclusion>
           <groupId>org.hsqldb</groupId>
@@ -253,14 +253,14 @@
           <artifactId>jackson-core</artifactId>
         </exclusion>
       </exclusions>
-    </dependency>   
+    </dependency>
     <dependency>
       <groupId>org.apache.calcite.avatica</groupId>
       <artifactId>avatica</artifactId>
       <version>${avatica.version}</version>
       <exclusions>
         <!-- hsqldb interferes with the use of derby as the default db
-          in hive's use of datanucleus. 
+          in hive's use of datanucleus.
         -->
         <exclusion>
           <groupId>org.hsqldb</groupId>
