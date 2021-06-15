@@ -474,6 +474,12 @@ public class Warehouse {
   public boolean isDir(Path f) throws MetaException {
     FileSystem fs = null;
     try {
+      //todo
+      //skip checking permission if scheme is "webhdfs"
+      if (f.toUri().getScheme().equals("webhdfs")){
+        LOG.info("schema is webhdfs,skip checking dirs");
+        return true;
+      }
       fs = getFs(f);
       FileStatus fstatus = fs.getFileStatus(f);
       if (!fstatus.isDir()) {

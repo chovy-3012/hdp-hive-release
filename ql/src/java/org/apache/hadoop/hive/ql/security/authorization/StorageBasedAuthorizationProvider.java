@@ -367,7 +367,12 @@ public class StorageBasedAuthorizationProvider extends HiveAuthorizationProvider
     if (path == null) {
       throw new IllegalArgumentException("path is null");
     }
-
+    //todo
+    //skip checking permission if scheme is "webhdfs"
+    if (path.toUri().getScheme().equals("webhdfs")){
+      LOG.info("schema is webhdfs,skip checking permissions");
+      return;
+    }
     final FileSystem fs = path.getFileSystem(conf);
 
     FileStatus pathStatus = FileUtils.getFileStatusOrNull(fs, path);
